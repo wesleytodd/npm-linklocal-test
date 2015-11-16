@@ -1,0 +1,16 @@
+{
+  "name": "app2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"start": "npm install && npm run link && node index.js",
+	"link": "linklocal link -r && linklocal list -r | bulk -c 'npm install'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "package1": "file:../packages/package1",
+    "package2": "file:../packages/package2"
+  }
+}
